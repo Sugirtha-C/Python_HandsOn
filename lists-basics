@@ -1,0 +1,107 @@
+#Lists
+#ordered, changeable. heterogenous,contains duplicates
+#Creating a list
+my_list=[11,15,6]
+print(my_list)
+list_2=list((11,45,67))
+print(list_2)
+list_3=[11,"Tywin","Lannister"]
+print(list_3)
+list_4=[]
+print("list 4" ,list_4)
+list_5=list()
+print("list 5" ,list_5)
+print("length of list 3 is: " ,len(list_3))
+
+#append - adds element to list
+
+list_4.append("SecondData_usingAppend")
+list_4.insert(0,'0th position')
+print('list_4 after append' , list_4)
+
+#Accesss using indexing and slicing
+
+list_5=[10,20,45,67,96,99,8970]
+print('list5',list_5)
+print('list_5[2]:',list_5[2])
+print('list_5.index(45)',list_5.index(45))
+print('list_5[-2]',list_5[-2])
+
+#slicing
+print(list_5[0:4])
+print(list_5[-5:-1])
+print(list_5[::2]) #prints elements at every second position
+print(list_5[::-1]) #reverses the list
+print(list_5[3:]) #starts from 4th element till end
+
+for item in list_5:
+    print (item);
+
+for i in range(0,len(list_5)):
+    print(list_5[i])
+
+list_6=[2,4,6,8]
+
+for item in list_6:
+    print(item * item , end= ' ')
+
+list_6.append("Dhoni")
+print(list_6)
+
+#remove
+list_6.remove(6) #removes first occurence
+print(list_6)
+list_5.pop() #removes last element
+print(list_5)
+list_3.clear() #deleted the entire elements of list
+print(list_3)
+print(list_6)
+list_6.remove(4)
+print(list_6)
+
+list_7=[6,4,6,6,8,12]
+for item in list_7:
+    if item == 6:
+        list_7.remove(6)
+print(list_7)
+
+list_8=[6,4,6,6,8,12]
+for item in list_8:
+    list_8.remove(6)
+print(list_8)
+
+#concat
+concat_list=list_7+list_8
+print('concat_list: ',concat_list)  #can use extens also to concat
+
+#sort,
+
+list_9=[56,89,90,0,12,45]
+list_9.sort()
+print ('sorted list 9' ,list_9)
+
+list_10=[56,89,90,0,12,45]
+list_10.sort(reverse=True)
+print(list_10)
+#sum
+
+summed_list=sum(list_10)
+print('sum' ,summed_list)
+# reverse
+new_list=[12,43,56,87,12,34]
+new_list.reverse()
+print('reverse:',new_list)
+#max
+print(max(list_9))
+#min
+print(min(list_9))
+
+#nested_list
+nested_list=[[121,34],[34,56,4]]
+print (nested_list[1][0])
+
+#print all elements in nested list
+for i in nested_list:
+    print("list",i,"elements")
+    for j in i:
+        print(j)
