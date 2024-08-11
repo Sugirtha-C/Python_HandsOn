@@ -1,0 +1,114 @@
+#Dictionaries: Key Value pairs
+#Ordered collections of unique values that is stored in key value pairs
+#From #3.7, its ordered,mutable ( earlier it was unordered)
+
+#how to create a dictionary
+
+person = {
+    "name" :"John",
+    "age" :  32
+}
+
+print(person)
+
+person2=dict({"name":"john", "age": 35})
+print(person2)
+person3=dict([("name","john"),("age",37)])
+print(person3)
+
+person4= {"name":"John", "mobile":[1234,6789]}
+print(person4)
+#Iterating a dictionary:
+print("printing key value iterations from loop")
+print('key',':','value')
+for key_value in person4.items():
+    print("Key is: ",key_value[0], "Value is: ",key_value[1])
+
+#find length
+print("Length is",len(person4))
+#accessing elements
+print("accessing elements printing")
+print(person4["name"])
+print(person4.get('mobile'))
+print(person4.keys())
+print(person4.values())
+print(person4.items())
+
+#add elements
+person4["height"]= 6.1
+person4.update({"weight":90})
+print(person4)
+
+#multiple keys
+person4.update({"weight":90, "city":'Delhi'})
+print(person4)
+person_details={"name":"Tony","country":"USA"}
+person_details={"name":"Tony1","country":"Ireland"}
+person_details.setdefault('zip')
+print(person_details)
+
+#remove the items
+person_details.pop("country")
+person_details.popitem() #last inserted item from the dictionary
+print(person_details)
+
+del person4["name"]
+print(person4)
+person3.clear()
+print('person3: ' , person3)
+#use in to check value inside
+print('name' in person2)
+print('name' not in person2)
+#copy and update
+
+dict1={'a':1,'b':2}
+dict2={'c': 3, 'd': 4}
+dict3=dict1.copy()
+dict3.update(dict2)
+print('dict3',dict3)
+print('dict4', dict3)
+
+#unpack
+student={'name':'john','age': 36}
+details={'city':'delhi', 'address':'maviya nagar'}
+contact={'mobile':123, 'email':'hotmail'}
+
+student_Details={**student, **details, **contact}
+print(student_Details)
+
+addr={'state':'tamilnadu','pincode':'122011'}
+person6={'name':'rohit','addr': addr,'company':'TCS'}
+#print("Person6 details:",person6)
+
+print("city:", person6["addr"]["pincode"])
+
+for key, value in person6.items():
+    if key == "addr" :
+        print("person address")
+        for nested_key, nested_value in value.items():
+            print(nested_key, " :" , nested_value)
+    else:
+        print(key, " : " , value)
+
+bala={"name":"bala","age":25,"country":"india","marks":90}
+ashwini={"name":"ashwini","age":26,"country":"india","marks":92}
+sandeep={"name":"sandeep","age":27,"country":"india","marks":94}
+
+class_seven={"student1":bala,"student2":ashwini,"student3":sandeep}
+print(class_seven)
+
+print("st")
+
+print("Student3's marks: ",class_seven["student3"]["marks"])
+print("Student3's name: ",class_seven["student3"]["name"])
+
+
+#sorting
+
+dict_sort={"C":25,"A:": 23}
+sorting=sorted(dict_sort.items())
+print(sorting)
+pvalue_Sort=sorted(dict_sort.values())
+print(pvalue_Sort)
+
+
