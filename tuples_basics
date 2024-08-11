@@ -1,0 +1,83 @@
+#tuple: ordered, unchangeable/immutable, hetrogenous, contains duplicates
+
+my_tuple=(11,15,45,6756,56)
+print(my_tuple)
+
+single_tuple = ('Hello')
+print(single_tuple)
+
+#Packing and unpacking tuple can created without tuple constructor or enclosing items within parenthesis
+# that is called packing and unpacking
+
+tuple1= 1,2,'Hello'
+print(type(tuple1))
+
+a,b,c= tuple1
+print(a)
+print(b)
+print(c)
+
+#tuple-ordered,unchangeable,hetrogeneous,contains duplicate
+my_tuple=(11,15,17,21,25,55,59)
+print(my_tuple)
+my_tuple1=tuple((11,15,17,21,25,55,59))
+print(my_tuple1)
+
+single_tuple=('hello')
+
+#Packing and unpacking tuple can created without tuple constructor or enclosing items within parenthesis
+# that is called packing and unpacking
+
+tuple1=1,2,"hello"
+print(type(tuple1))
+
+#unpacking
+a,b,c=tuple1
+print(a)
+print(b)
+print(c)
+
+
+#length
+print(len(tuple1))
+
+#iterating
+my_tuple2=(11,15,17,21,25,[21,23,45])
+for i in my_tuple2:
+    print(i)
+
+#accessing
+tuple2=('p','y','t','h','o','n')
+for i in range(4):
+    print(tuple2[i])
+
+print(tuple2[3])
+
+for i in range(-6,0):
+    print(tuple2[i])
+
+#slicing
+
+tuple3=(1,2,3,4,5,6,7,8,9,10)
+print(tuple3[1:5])
+print(tuple3[:5])
+print(tuple3[5:])
+print(tuple3[::2])
+print(tuple3[::3])
+
+tuple4=(10,20,30,40)
+position=tuple4.index(30)
+print(position)
+#check if an item exists
+
+print(40 in tuple4)
+
+#count
+tuple5=(10,20,60,30,60,40,60)
+print(tuple5.count(60))
+
+tuple6=tuple5;
+print(tuple6)
+
+sample_list=list(tuple6)
+print(sample_list)
